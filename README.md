@@ -69,7 +69,7 @@
 仓库中最适合直接运行演示的项目是 [`CodeDemo/CIM/`](CodeDemo/CIM/)。
 
 ```bash
-cd /home/runner/work/3C-demo/3C-demo/CodeDemo/CIM
+cd CodeDemo/CIM
 dotnet build Cim3CIntegrationDemo.slnx
 ```
 
