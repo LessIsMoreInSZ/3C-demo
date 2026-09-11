@@ -215,17 +215,21 @@ dotnet run
 
 **macOS / Linux**
 
+例如，直接从 `CodeDemo/CIM/` 启动 `RestApi`：
+
 ```bash
 mkdir -p /tmp/cim-demo
-Database__Path=/tmp/cim-demo/cim.db dotnet run
+Database__Path=/tmp/cim-demo/cim.db dotnet run --project src/Cim.RestApi
 ```
 
 **Windows PowerShell**
 
+例如，直接从 `CodeDemo/CIM/` 启动 `RestApi`：
+
 ```powershell
 New-Item -ItemType Directory -Force -Path "$env:TEMP\cim-demo" | Out-Null
 $env:Database__Path = "$env:TEMP\cim-demo\cim.db"
-dotnet run
+dotnet run --project src/Cim.RestApi
 ```
 
 ## 接口说明
