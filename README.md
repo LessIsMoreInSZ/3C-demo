@@ -66,7 +66,7 @@
 
 ### `CodeDemo/CIM/` 本地运行
 
-仓库中最适合直接运行演示的项目是 [`CodeDemo/CIM/`](CodeDemo/CIM/)。
+仓库中最适合直接运行演示的项目是 [`CodeDemo/CIM/`](CodeDemo/CIM/)。当前仓库里的解决方案入口文件名为 `Cim3CIntegrationDemo.slnx`。
 
 ```bash
 cd CodeDemo/CIM

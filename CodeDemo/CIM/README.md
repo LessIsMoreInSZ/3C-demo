@@ -40,7 +40,7 @@
 
 ```text
 CodeDemo/CIM/
-├── Cim3CIntegrationDemo.slnx          # 解决方案入口
+├── Cim3CIntegrationDemo.slnx          # 当前仓库使用的解决方案入口
 ├── README.md                          # 项目说明、启动与演示入口
 ├── docs/
 │   └── CIM_vs_MES.md                  # 解释 CIM 与 MES 的区别与关系
@@ -55,7 +55,7 @@ CodeDemo/CIM/
 ## Solution Structure
 
 ```text
-Cim3CIntegrationDemo.slnx
+Cim3CIntegrationDemo.slnx  # 当前仓库使用的解决方案入口
 └── src/
     ├── Cim.DbAdapter/          Class library – SQLite/Dapper persistence, shared models, event bus abstractions
     ├── Cim.RestApi/            ASP.NET Core Minimal API – CIM integration endpoints + Swagger
@@ -155,7 +155,7 @@ Device / PLC / Adapter
 
 ### 1. 构建解决方案
 
-以下命令默认从当前目录 `CodeDemo/CIM/` 执行。
+以下命令默认从当前目录 `CodeDemo/CIM/` 执行；当前仓库使用的解决方案文件名是 `Cim3CIntegrationDemo.slnx`。
 
 ```bash
 dotnet build Cim3CIntegrationDemo.slnx
