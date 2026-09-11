@@ -155,15 +155,16 @@ Device / PLC / Adapter
 
 ### 1. 构建解决方案
 
+以下命令默认从当前目录 `CodeDemo/CIM/` 执行。
+
 ```bash
-cd CodeDemo/CIM
 dotnet build Cim3CIntegrationDemo.slnx
 ```
 
 ### 2. 启动 RestApi
 
 ```bash
-cd CodeDemo/CIM/src/Cim.RestApi
+cd src/Cim.RestApi
 dotnet run
 ```
 
@@ -173,7 +174,7 @@ dotnet run
 ### 3. 启动 DeviceSimulator
 
 ```bash
-cd CodeDemo/CIM/src/Cim.DeviceSimulator
+cd src/Cim.DeviceSimulator
 dotnet run
 ```
 
@@ -183,7 +184,7 @@ dotnet run
 ### 4. （可选）启动 MqWorker
 
 ```bash
-cd CodeDemo/CIM/src/Cim.MqWorker
+cd src/Cim.MqWorker
 dotnet run
 ```
 
