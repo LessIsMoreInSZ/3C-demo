@@ -210,10 +210,21 @@ dotnet run
 
 ### 数据文件路径要注意什么
 
-默认 `Database:Path` 是 `./data/cim.db`，它是**相对于各自进程的工作目录**解析的。为了避免多个进程各自写到不同位置，建议统一从**同一个工作目录**启动，或更直接地**始终显式指定同一个绝对路径**；对于多进程演示，更推荐后者，例如：
+默认 `Database:Path` 是 `./data/cim.db`，它是**相对于各自进程的工作目录**解析的。为了避免多个进程各自写到不同位置，建议统一从**同一个工作目录**启动，或更直接地**始终显式指定同一个绝对路径**；对于多进程演示，更推荐后者。
+
+**macOS / Linux**
 
 ```bash
+mkdir -p /tmp/cim-demo
 Database__Path=/tmp/cim-demo/cim.db dotnet run
+```
+
+**Windows PowerShell**
+
+```powershell
+New-Item -ItemType Directory -Force -Path "$env:TEMP\cim-demo" | Out-Null
+$env:Database__Path = "$env:TEMP\cim-demo\cim.db"
+dotnet run
 ```
 
 ## 接口说明
