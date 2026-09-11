@@ -408,13 +408,13 @@ Device / Adapter -> Broker -> MqWorker -> SQLite
 如果你要把这个项目演示给同事、客户或新人，可以按下面顺序走：
 
 1. 打开 [`docs/CIM_vs_MES.md`](docs/CIM_vs_MES.md)，先讲清楚“为什么需要 CIM”
-2. 启动 `RestApi`，打开 Swagger，让读者先看到接口边界（见 [接口说明](#接口说明)）
-3. 启动 `DeviceSimulator`，说明有哪些设备：`SMT-01`、`AOI-01`、`TEST-01`（见 [TCP Control Port (DeviceSimulator)](#tcp-control-port-devicesimulator)）
-4. 用 `STATUS` 或 `STATE` 命令演示设备状态变化（见 [TCP Control Port (DeviceSimulator)](#tcp-control-port-devicesimulator)）
-5. 调用 `POST /api/trackin` 演示 SN 进站（见 [TrackIn](#trackin)）
-6. 调用 `POST /api/recipe/verify` 演示 Recipe 校验（见 [Verify recipe](#verify-recipe)）
-7. 用 `TEST TEST-01` 或 `POST /api/testresults/upsert` 演示测试结果归档（见 [Upsert test result](#upsert-test-result)）
-8. 查询 `GET /api/testresults/{sn}`，展示追溯结果（见 [Query test result by serial number](#query-test-result-by-serial-number)）
+2. 启动 `RestApi`，打开 Swagger，让读者先看到接口边界（见下方“接口说明”章节）
+3. 启动 `DeviceSimulator`，说明有哪些设备：`SMT-01`、`AOI-01`、`TEST-01`（见下方 “TCP Control Port (DeviceSimulator)” 章节）
+4. 用 `STATUS` 或 `STATE` 命令演示设备状态变化（见下方 “TCP Control Port (DeviceSimulator)” 章节）
+5. 调用 `POST /api/trackin` 演示 SN 进站（见下方 “Sample curl Commands” 中的 `TrackIn` 示例）
+6. 调用 `POST /api/recipe/verify` 演示 Recipe 校验（见下方 “Sample curl Commands” 中的 `Verify recipe` 示例）
+7. 用 `TEST TEST-01` 或 `POST /api/testresults/upsert` 演示测试结果归档（见下方 “Sample curl Commands” 中的 `Upsert test result` 示例）
+8. 查询 `GET /api/testresults/{sn}`，展示追溯结果（见下方 “Sample curl Commands” 中的 `Query test result by serial number` 示例）
 9. 最后解释：当前是教学型 Demo，若要生产化，需要替换外部消息中间件、权限、审计和真实协议接入
 
 ## FAQ
