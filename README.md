@@ -8,7 +8,7 @@
 
 ## 仪器通信总结：C# 与 GPIB、串口、以太网/LAN、IEEE 1394 和 USB
 
-下面整理的是一份可直��用于仪器通信入门与项目说明的 Markdown 文档，方便在 C# 项目中查阅。
+下面整理的是一份可直接用于仪器通信入门与项目说明的 Markdown 文档，方便在 C# 项目中查阅。
 
 ### 1. 概述
 
@@ -19,7 +19,7 @@
 2. 通过系统级通信接口
    - 如串口、Socket、USB HID/WinUSB、网络协议等
 
-对于测试仪器，最常见且最推荐的是使用 VISA（Virtual Instrument Software Architecture）作为统一接口层。它可以屏蔽底层总线差异，让开发者用相似的方式访问 GPIB、串口、LAN、USB 等设备。
+对于测试仪器，最常见且最推荐的是使用 VISA（Virtual Instrument Software Architecture）作为统一接口层。它可以屏蔽底层总线差异，让开发者用相似的方式访问 GPIB���串口、LAN、USB 等设备。
 
 ### 2. GPIB（IEEE 488）
 
@@ -101,7 +101,7 @@ USB 是当今最普及的仪器接口之一，很多设备支持 USB-TMC、USB C
 - USB HID：低速控制设备
 - USB Bulk：高吞吐量设备
 
-### 7. C# 中��见通信架构
+### 7. C# 中常见通信架构
 
 **使用 VISA 的统一方式**
 - GPIB
@@ -131,7 +131,7 @@ USB 是当今最普及的仪器接口之一，很多设备支持 USB-TMC、USB C
 
 ### 9. 选型建议
 
-- 如果需要统一开发：优先选择 VISA
+- 如果需要统一开发���优先选择 VISA
 - 如果仪器是串口设备：直接使用 `SerialPort`
 - 如果仪器支持 LAN：优先考虑 TCP/IP + SCPI
 - 如果是 USB 仪器：优先查看是否支持 VISA USB、USB-TMC 或厂商 .NET SDK
@@ -148,3 +148,43 @@ C# 与仪器通信的核心目标，是通过稳定、统一、可维护的方�
 - USB 是当前最常见的仪器接口之一
 
 如果条件允许，建议优先使用 VISA + SCPI 的方式构建仪器通信程序，这样可以显著提高代码复用性和设备兼容性。
+
+---
+
+## 12. 仓库文档索引建议
+
+如果你在这个仓库里继续扩展仪器通信主题，建议按下面方式组织：
+
+- `docs/instrument-communication-summary.md`：总览与选型
+- `docs/vpi-visa-scpi-basics.md`：VISA 与 SCPI 入门
+- `docs/serial-tcp-usb-examples.md`：串口、TCP、USB 示例
+- `docs/gpib-lan-usb-comparison.md`：接口差异对比
+
+### 推荐阅读路径
+
+1. 先看总览，理解各接口适用场景
+2. 再看 VISA / SCPI 基础
+3. 再看具体接口示例
+4. 最后按项目需要做选型
+
+### 可继续补充的内容
+
+- C# 实战代码示例
+- 常见仪器厂商驱动接入方法
+- SCPI 命令集速查
+- 通信异常排查与日志设计
+
+## 13. 参考关键词
+
+- C#
+- SerialPort
+- TCP/IP
+- Socket
+- VISA
+- SCPI
+- GPIB
+- USB-TMC
+- VXI-11
+- HiSLIP
+- IEEE 488
+- IEEE 1394
